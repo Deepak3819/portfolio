@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepak S | Software Developer</title>
+    <meta name="description" content="Portfolio of Deepak S, Software Developer specializing in Android, Machine Learning, and Web Development.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Background Glowing Orbs -->
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+    <div class="bg-orb orb-3"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">DS.</div>
+        <div class="nav-links">
+            <a href="#home" class="magnetic" data-strength="20">Home</a>
+            <a href="#about" class="magnetic" data-strength="20">About</a>
+            <a href="#projects" class="magnetic" data-strength="20">Projects</a>
+            <a href="#contact" class="magnetic" data-strength="20">Contact</a>
+        </div>
+        <a href="#contact" class="btn primary-btn magnetic" data-strength="40">Let's Talk</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <p class="greeting reveal-text">Hello, World! I am</p>
+                <h1 class="name glitch" data-text="Deepak S">Deepak S</h1>
+                <h2 class="role reveal-text"><span class="gradient-text">Software Developer</span></h2>
+                <p class="bio reveal-text">
+                    BCA & MCA Graduate based in Bangalore, India. 
+                    I build innovative mobile applications, intelligent machine learning models, 
+                    and scalable full-stack web platforms.
+                </p>
+                <div class="hero-actions reveal-text">
+                    <a href="#projects" class="btn primary-btn magnetic" data-strength="30">Explore Work <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="my resume(Deepak).pdf" target="_blank" class="btn secondary-btn magnetic" data-strength="30" download="Deepak_Resume.pdf">Download Resume <i class="fa-solid fa-download"></i></a>
+                    <div class="socials">
+                        <a href="https://github.com/Deepak3819" target="_blank" class="magnetic" data-strength="20"><i class="fa-brands fa-github"></i></a>
+                        <a href="#" class="magnetic" data-strength="20"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="image-wrapper">
+                    <img src="profile.png" alt="Deepak S Profile Picture" class="profile-img">
+                    <div class="image-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Skills Section -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2 class="section-title">My Arsenal</h2>
+                <div class="line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card fade-up">
+                    <i class="fa-brands fa-java skill-icon"></i>
+                    <h3>Java / Android</h3>
+                    <p>Building robust, material-designed mobile applications with native APIs.</p>
+                </div>
+                <div class="skill-card fade-up">
+                    <i class="fa-brands fa-python skill-icon"></i>
+                    <h3>Python / ML</h3>
+                    <p>Computer Vision, TensorFlow, Keras, and OpenCV for intelligent solutions.</p>
+                </div>
+                <div class="skill-card fade-up">
+                    <i class="fa-brands fa-js skill-icon"></i>
+                    <h3>MERN Stack</h3>
+                    <p>MongoDB, Express.js, React, Node.js for scalable web applications.</p>
+                </div>
+                <div class="skill-card fade-up">
+                    <i class="fa-solid fa-database skill-icon"></i>
+                    <h3>Databases & Architecture</h3>
+                    <p>MVC Patterns, REST APIs, and structured data flow design.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Horizontal Scroll Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="section-header pinned-header">
+                <h2 class="section-title">Selected Works</h2>
+                <p>Scroll down to explore <i class="fa-solid fa-arrow-down" style="margin-left: 10px;"></i></p>
+            </div>
+            
+            <div class="projects-container">
+                <div class="projects-wrapper">
+                    
+                    <!-- Project 1 -->
+                    <div class="project-panel">
+                        <div class="project-card glass">
+                            <div class="project-number">01</div>
+                            <h3>Skill Swap</h3>
+                            <p class="project-desc">A modern Android application for freelancing that connects people to share and exchange skills.</p>
+                            <div class="tech-tags">
+                                <span>Java</span>
+                                <span>Android API 21+</span>
+                                <span>Material Design</span>
+                                <span>MVC Pattern</span>
+                                <span>SharedPreferences</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-panel">
+                        <div class="project-card glass">
+                            <div class="project-number">02</div>
+                            <h3>Sign Language Translator</h3>
+                            <p class="project-desc">Real-time ML project that translates hand signs to words using a webcam and gesture classification models.</p>
+                            <div class="tech-tags">
+                                <span>Python</span>
+                                <span>MediaPipe</span>
+                                <span>OpenCV</span>
+                                <span>TensorFlow / Keras</span>
+                                <span>TFLite</span>
+                                <span>Tkinter</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-panel">
+                        <div class="project-card glass">
+                            <div class="project-number">03</div>
+                            <h3>Secure File Converter</h3>
+                            <p class="project-desc">An Android application to convert files into binary content ensuring security, privacy, and unauthorized access prevention.</p>
+                            <div class="tech-tags">
+                                <span>Java</span>
+                                <span>XML</span>
+                                <span>Android Studio</span>
+                                <span>Local Processing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-panel">
+                        <div class="project-card glass">
+                            <div class="project-number">04</div>
+                            <h3>Women Safety SOS</h3>
+                            <p class="project-desc">A web application that allows users to send SMS alerts to personal contacts and police with live location during emergencies.</p>
+                            <div class="tech-tags">
+                                <span>HTML/CSS/JS</span>
+                                <span>MongoDB</span>
+                                <span>Express.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-panel">
+                        <div class="project-card glass">
+                            <div class="project-number">05</div>
+                            <h3>Student Management System</h3>
+                            <p class="project-desc">A comprehensive full-stack management system developed for NMIT to handle student records and administrative tasks efficiently.</p>
+                            <div class="tech-tags">
+                                <span>Full Stack Web</span>
+                                <span>Database Management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-panel">
+                        <div class="project-card glass">
+                            <div class="project-number">06</div>
+                            <h3>ROAD GUARD</h3>
+                            <p class="project-desc">Smart road kill reporting web application to save animals and ensure roads are cleared safely and promptly.</p>
+                            <div class="tech-tags">
+                                <span>HTML/CSS/JS</span>
+                                <span>MongoDB</span>
+                                <span>Express.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="contact-box glass">
+                <h2>Ready to build something amazing?</h2>
+                <p>I'm currently open for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                
+                <div class="contact-details">
+                    <a href="mailto:deepak636097@gmail.com" class="contact-item magnetic" data-strength="20">
+                        <div class="icon-circle"><i class="fa-solid fa-envelope"></i></div>
+                        <span>deepak636097@gmail.com</span>
+                    </a>
+                    <a href="tel:6360973127" class="contact-item magnetic" data-strength="20">
+                        <div class="icon-circle"><i class="fa-solid fa-phone"></i></div>
+                        <span>+91 6360973127</span>
+                    </a>
+                </div>
+
+                <a href="mailto:deepak636097@gmail.com" class="btn primary-btn massive-btn magnetic" data-strength="50">Say Hello <i class="fa-solid fa-paper-plane"></i></a>
+            </div>
+            
+            <footer>
+                <p>&copy; 2026 Deepak S. Crafted with passion.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Deepak3819" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </footer>
+        </section>
+
+    </main>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+    
+    <!-- GSAP & ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
