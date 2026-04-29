@@ -142,37 +142,54 @@ document.addEventListener("DOMContentLoaded", () => {
         return -(projectsWidth - window.innerWidth);
     }
 
-    const tween = gsap.to(projectsWrapper, {
-        x: getScrollAmount,
-        ease: "none"
+    let mm = gsap.matchMedia();
+
+    // Desktop: GSAP Horizontal Scroll
+    mm.add("(min-width: 769px)", () => {
+        const tween = gsap.to(projectsWrapper, {
+            x: getScrollAmount,
+            ease: "none"
+        });
+
+        ScrollTrigger.create({
+            trigger: ".projects-section",
+            start: "top top",
+            end: () => `+=${getScrollAmount() * -1}`,
+            pin: true,
+            animation: tween,
+            scrub: 1,
+            invalidateOnRefresh: true,
+        });
+
+        // Animate project cards inside horizontal scroll
+        const projectCards = gsap.utils.toArray('.project-card');
+        projectCards.forEach((card, i) => {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    containerAnimation: tween,
+                    start: "left 80%",
+                    toggleActions: "play none none reverse",
+                },
+                y: 50,
+                opacity: 0,
+                rotation: 5,
+                duration: 0.8,
+                ease: "power3.out"
+            });
+        });
     });
 
-    ScrollTrigger.create({
-        trigger: ".projects-section",
-        start: "top top",
-        end: () => `+=${getScrollAmount() * -1}`,
-        pin: true,
-        animation: tween,
-        scrub: 1,
-        invalidateOnRefresh: true,
-        // markers: false // Set to true for debugging
-    });
-
-    // Animate project cards inside horizontal scroll
-    const projectCards = gsap.utils.toArray('.project-card');
-    projectCards.forEach((card, i) => {
-        gsap.from(card, {
+    // Mobile: Native Horizontal Swipe
+    mm.add("(max-width: 768px)", () => {
+        // Just fade in the projects container
+        gsap.from('.projects-wrapper', {
             scrollTrigger: {
-                trigger: card,
-                containerAnimation: tween,
-                start: "left 80%",
-                toggleActions: "play none none reverse",
+                trigger: '.projects-section',
+                start: "top 80%",
             },
-            y: 50,
             opacity: 0,
-            rotation: 5,
-            duration: 0.8,
-            ease: "power3.out"
+            duration: 1,
         });
     });
 

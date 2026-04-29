@@ -664,4 +664,50 @@ footer {
         width: 300px;
         height: 350px;
     }
+    .projects-section {
+        height: auto;
+    }
+    .projects-container {
+        height: auto;
+        padding-top: 150px; 
+    }
+    .pinned-header {
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 20px;
+        padding: 0 5%;
+    }
+    .projects-wrapper {
+        height: auto;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-bottom: 50px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+    .projects-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+    .project-panel {
+        width: 85vw;
+        scroll-snap-align: center;
+    }
+    .project-card {
+        height: 400px;
+    }
+}
+
+@media (pointer: coarse) {
+    .cursor, .cursor-follower {
+        display: none !important;
+    }
+    body {
+        cursor: auto;
+    }
+    a, button, .magnetic {
+        cursor: pointer;
+    }
 }
